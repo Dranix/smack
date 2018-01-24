@@ -18,6 +18,8 @@
 		FA596BB32011AF3F00D6CA33 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA596BB22011AF3F00D6CA33 /* ChatVC.swift */; };
 		FA832843201860D400C87675 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA832842201860D400C87675 /* Constant.swift */; };
 		FAC6C34020186B6800E40341 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6C33F20186B6800E40341 /* LoginVC.swift */; };
+		FAC6C34220186F9E00E40341 /* RoundCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6C34120186F9E00E40341 /* RoundCornerButton.swift */; };
+		FAC6C34420187B3500E40341 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6C34320187B3500E40341 /* CreateAccountVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		FA596BB22011AF3F00D6CA33 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		FA832842201860D400C87675 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		FAC6C33F20186B6800E40341 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		FAC6C34120186F9E00E40341 /* RoundCornerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundCornerButton.swift; sourceTree = "<group>"; };
+		FAC6C34320187B3500E40341 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				FA415D792016F8AA000861A4 /* GradientView.swift */,
+				FAC6C34120186F9E00E40341 /* RoundCornerButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 				FA596BB02011AF3300D6CA33 /* ChannelVC.swift */,
 				FA596BB22011AF3F00D6CA33 /* ChatVC.swift */,
 				FAC6C33F20186B6800E40341 /* LoginVC.swift */,
+				FAC6C34320187B3500E40341 /* CreateAccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,8 +282,10 @@
 				FAC6C34020186B6800E40341 /* LoginVC.swift in Sources */,
 				FA415D7A2016F8AA000861A4 /* GradientView.swift in Sources */,
 				FA596BB12011AF3300D6CA33 /* ChannelVC.swift in Sources */,
+				FAC6C34420187B3500E40341 /* CreateAccountVC.swift in Sources */,
 				FA3335FC20103E3D00543FA3 /* SWRevealViewController.m in Sources */,
 				FA832843201860D400C87675 /* Constant.swift in Sources */,
+				FAC6C34220186F9E00E40341 /* RoundCornerButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
