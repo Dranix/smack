@@ -180,6 +180,11 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNG-6f-V4w">
                                 <rect key="frame" x="57" y="295" width="260" height="30"/>
@@ -334,6 +339,9 @@
                                 <state key="normal" title="Generate background color">
                                     <color key="titleColor" red="0.36862745099999999" green="0.62745098040000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="generateBGColorPressed:" destination="HeF-4l-qn8" eventType="touchUpInside" id="l8X-na-ZPN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11J-Wr-XcR" customClass="RoundCornerButton" customModule="smack" customModuleProvider="target">
                                 <rect key="frame" x="57.5" y="597" width="260" height="60"/>
@@ -346,6 +354,14 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="HeF-4l-qn8" eventType="touchUpInside" id="Og6-IP-Yen"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVu-IN-8qi">
                                 <rect key="frame" x="127" y="320.5" width="120" height="150"/>
@@ -356,6 +372,9 @@
                                 <state key="normal" title="Choose avatar">
                                     <color key="titleColor" red="0.36862745099999999" green="0.62745098040000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseAvatarPressed:" destination="HeF-4l-qn8" eventType="touchUpInside" id="iMY-3N-7qA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -379,6 +398,10 @@
                         <viewLayoutGuide key="safeArea" id="0w5-VG-6sr"/>
                     </view>
                     <connections>
+                        <outlet property="emailTxt" destination="OHl-UG-RtA" id="tdh-wX-ntO"/>
+                        <outlet property="passwordTxt" destination="Y4e-rH-YK0" id="Jtp-XV-qOk"/>
+                        <outlet property="profileImg" destination="O6Z-cn-YDh" id="4OL-b2-TUH"/>
+                        <outlet property="userNameTxt" destination="bH3-6Z-q02" id="zYr-Bt-vhq"/>
                         <segue destination="sKm-kA-gAF" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="esk-Dk-KaF"/>
                     </connections>
                 </viewController>
