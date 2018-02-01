@@ -8,6 +8,16 @@
 
 import Foundation
 
+typealias CompletionHandler = (_ Success: Bool) -> ()
+//Service URL
+let BASE_URL = "https://justmysmack.herokuapp.com/v1/"
+let URL_AUTH = "\(BASE_URL)account/register"
+
+//User default
+let LOGGED_IN_KEY = "loggedIn"
+let AUTH_TOKEN_KEY = "authKey"
+let EMAIL_KEY = "emailKey"
+
 //Segues
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
