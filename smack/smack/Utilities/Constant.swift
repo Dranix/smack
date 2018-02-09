@@ -15,6 +15,9 @@ let URL_AUTH = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_ADD = "\(BASE_URL)user/add"
 
+//NOTI
+let NOTI_DID_LOG_IN = Notification.Name("userDidLogIn")
+
 //User default
 let LOGGED_IN_KEY = "loggedIn"
 let AUTH_TOKEN_KEY = "authKey"

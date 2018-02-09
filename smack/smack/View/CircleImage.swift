@@ -8,14 +8,19 @@
 
 import UIKit
 
+@IBDesignable
 class CircleImage: UIImageView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    override func awakeFromNib() {
+        setupView()
     }
-    */
 
+    func setupView(){
+        self.layer.cornerRadius = self.bounds.size.width / 2
+        self.clipsToBounds = true
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        setupView()
+    }
 }
