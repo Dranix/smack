@@ -24,6 +24,7 @@ let EMAIL_KEY = "emailKey"
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
 let UNWIND_TO_CHANNEL = "unwindToChannel"
+let TO_AVATAR_PICKER = "toAvatarPicker"
 
 //Header
 let HEADER = ["Content-Type":"application/json;charset=utf-8"]
