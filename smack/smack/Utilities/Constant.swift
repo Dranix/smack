@@ -13,6 +13,8 @@ typealias CompletionHandler = (_ Success: Bool) -> ()
 let BASE_URL = "https://justmysmack.herokuapp.com/v1/"
 let URL_AUTH = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
+let URL_ADD = "\(BASE_URL)user/add"
+
 //User default
 let LOGGED_IN_KEY = "loggedIn"
 let AUTH_TOKEN_KEY = "authKey"
