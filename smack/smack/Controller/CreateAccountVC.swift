@@ -42,11 +42,11 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func closeBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: UNWIND_TO_CHANNEL, sender: nil)
+        performSegue(withIdentifier: SEGUES.UNWIND_TO_CHANNEL, sender: nil)
     }
     
     @IBAction func chooseAvatarPressed(_ sender: Any) {
-        performSegue(withIdentifier: TO_AVATAR_PICKER, sender: nil)
+        performSegue(withIdentifier: SEGUES.TO_AVATAR_PICKER, sender: nil)
     }
     
     @IBAction func generateBGColorPressed(_ sender: Any) {
@@ -58,6 +58,8 @@ class CreateAccountVC: UIViewController {
         UIView.animate(withDuration: 0.2) {
             self.profileImg.backgroundColor = randomColor
         }
+        
+        UserDataService.instance.setAvatarColor(color: randomColor)
     }
     
     @IBAction func createAccountPressed(_ sender: Any) {
@@ -73,8 +75,8 @@ class CreateAccountVC: UIViewController {
                         AuthService.instance.createUser(name: name, email: email, avatarName: UserDataService.instance.avatarName, avatarColor: UserDataService.instance.avatarColor, completion: { (success) in
                             if success{
                                 self.spinner.stopAnimating()
-                                self.performSegue(withIdentifier: UNWIND_TO_CHANNEL, sender: nil)
-                                NotificationCenter.default.post(name: NOTI_DID_LOG_IN, object: nil)
+                                self.performSegue(withIdentifier: SEGUES.UNWIND_TO_CHANNEL, sender: nil)
+                                NotificationCenter.default.post(name: NOTIFICATION.USER_DATA_CHANGED, object: nil)
                             }
                         })
                     }

@@ -28,4 +28,12 @@ class UserDataService{
     func setAvatarName(avatarName: String){
         self.avatarName = avatarName
     }
+    
+    func setAvatarColor(color: UIColor){
+        avatarColor = Helper.fromUIColorToString(color: color)
+    }
+    
+    func getAvatarColor() -> UIColor{
+        return Helper.fromStringToUIColor(colorString: self.avatarColor)
+    }
 }

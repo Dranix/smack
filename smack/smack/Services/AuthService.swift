@@ -17,31 +17,31 @@ class AuthService{
     
     var isLoggedIn: Bool {
         get{
-            return defaults.bool(forKey: LOGGED_IN_KEY)
+            return defaults.bool(forKey: KEYS.LOGGED_IN)
         }
         
         set{
-            defaults.set(newValue, forKey: LOGGED_IN_KEY)
+            defaults.set(newValue, forKey: KEYS.LOGGED_IN)
         }
     }
     
     var authToken: String{
         get{
-            return defaults.value(forKey: AUTH_TOKEN_KEY) as! String
+            return defaults.value(forKey: KEYS.AUTH_TOKEN) as! String
         }
         
         set{
-            defaults.set(newValue, forKey: AUTH_TOKEN_KEY)
+            defaults.set(newValue, forKey: KEYS.AUTH_TOKEN)
         }
     }
     
     var email: String{
         get{
-            return defaults.value(forKey: EMAIL_KEY) as! String
+            return defaults.value(forKey: KEYS.EMAIL) as! String
         }
         
         set{
-            defaults.set(newValue, forKey: EMAIL_KEY)
+            defaults.set(newValue, forKey: KEYS.EMAIL)
         }
     }
     
@@ -53,7 +53,7 @@ class AuthService{
             "password": password
         ]
         
-        Alamofire.request(URL_AUTH, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseString { (response) in
+        Alamofire.request(URL.AUTH, method: .post, parameters: body, encoding: JSONEncoding.default, headers: REQUEST.HEADER).responseString { (response) in
             if response.result.error == nil{
                 completion(true)
             }else{
@@ -71,7 +71,7 @@ class AuthService{
             "password": password
         ]
         
-        Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
+        Alamofire.request(URL.LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: REQUEST.HEADER).responseJSON { (response) in
             if response.result.error == nil{
                 guard let data = response.data else { return }
                 let json = JSON(data)
@@ -102,7 +102,7 @@ class AuthService{
             "Authorization": "Bearer \(AuthService.instance.authToken)"
         ]
         
-        Alamofire.request(URL_ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
+        Alamofire.request(URL.ADD, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseJSON { (response) in
             
             if response.result.error == nil{
                 guard let data = response.data else { return }

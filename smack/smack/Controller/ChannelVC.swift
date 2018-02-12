@@ -10,6 +10,7 @@ import UIKit
 
 class ChannelVC: UIViewController {
     //IBOutlets
+    @IBOutlet weak var profileImg: CircleImage!
     @IBOutlet weak var loginBtn: UIButton!
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
     
@@ -17,9 +18,15 @@ class ChannelVC: UIViewController {
         super.viewDidLoad()
 
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        profileImg.layer.backgroundColor = UserDataService.instance.getAvatarColor().cgColor
+        profileImg.image = UIImage(named: UserDataService.instance.avatarName)
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        performSegue(withIdentifier: SEGUES.TO_LOGIN, sender: nil)
     }
 }
