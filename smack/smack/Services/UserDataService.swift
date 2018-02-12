@@ -36,4 +36,16 @@ class UserDataService{
     func getAvatarColor() -> UIColor{
         return Helper.fromStringToUIColor(colorString: self.avatarColor)
     }
+    
+    func logout(){
+        self.id = ""
+        self.avatarColor = "[0.5, 0.5, 0.5, 1]"
+        self.avatarName = "profileDefault"
+        self.email = ""
+        self.name = ""
+        
+        AuthService.instance.isLoggedIn = false
+        AuthService.instance.authToken = ""
+        AuthService.instance.email = ""
+    }
 }

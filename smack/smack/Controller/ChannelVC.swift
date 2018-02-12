@@ -19,14 +19,36 @@ class ChannelVC: UIViewController {
 
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         
+        NotificationCenter.default.addObserver(self, selector: #selector(userDataDidChange(_:)), name: NOTIFICATION.USER_DATA_CHANGED, object: nil    )
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        profileImg.layer.backgroundColor = UserDataService.instance.getAvatarColor().cgColor
-        profileImg.image = UIImage(named: UserDataService.instance.avatarName)
+        self.setupView()
+    }
+    
+    @objc func userDataDidChange(_ notif: Notification) {
+        self.setupView()
+    }
+    
+    func setupView(){
+        if AuthService.instance.isLoggedIn == true{
+            profileImg.layer.backgroundColor = UserDataService.instance.getAvatarColor().cgColor
+            profileImg.image = UIImage(named: UserDataService.instance.avatarName)
+            loginBtn.setTitle(UserDataService.instance.name, for: .normal)
+        }else{
+            loginBtn.setTitle("Login", for: .normal)
+            profileImg.image = UIImage(named: "menuProfileIcon")
+            profileImg.backgroundColor = UIColor.clear
+        }
     }
     
     @IBAction func loginBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: SEGUES.TO_LOGIN, sender: nil)
+        if AuthService.instance.isLoggedIn == true{
+            let profileVC = ProfileVC()
+            profileVC.modalPresentationStyle = .custom
+            present(profileVC, animated: true, completion: nil)
+        }else{
+            performSegue(withIdentifier: SEGUES.TO_LOGIN, sender: nil)
+        }
     }
 }

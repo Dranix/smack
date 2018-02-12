@@ -23,6 +23,8 @@
 		FA5E2D64202D840B007D5F9E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2D63202D840B007D5F9E /* Helper.swift */; };
 		FA5E2D66202D855B007D5F9E /* UIColor+rgba.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E2D65202D855B007D5F9E /* UIColor+rgba.swift */; };
 		FA68D7EC20232B8800B76F7B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68D7EB20232B8800B76F7B /* AuthService.swift */; };
+		FA6F452C2031760D002DDECA /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6F452A2031760D002DDECA /* ProfileVC.swift */; };
+		FA6F452D2031760D002DDECA /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA6F452B2031760D002DDECA /* ProfileVC.xib */; };
 		FA832843201860D400C87675 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA832842201860D400C87675 /* Constant.swift */; };
 		FA98D432202809A50067DA47 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA98D431202809A50067DA47 /* UserDataService.swift */; };
 		FAC6C34020186B6800E40341 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6C33F20186B6800E40341 /* LoginVC.swift */; };
@@ -53,6 +55,8 @@
 		FA5E2D63202D840B007D5F9E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		FA5E2D65202D855B007D5F9E /* UIColor+rgba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+rgba.swift"; sourceTree = "<group>"; };
 		FA68D7EB20232B8800B76F7B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		FA6F452A2031760D002DDECA /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		FA6F452B2031760D002DDECA /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		FA832842201860D400C87675 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		FA98D431202809A50067DA47 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		FAC6C33F20186B6800E40341 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				FAC6C34120186F9E00E40341 /* RoundCornerButton.swift */,
 				FA5E2D5C202D5134007D5F9E /* AvatarCell.swift */,
 				FA5E2D5E202D78EE007D5F9E /* CircleImage.swift */,
+				FA6F452A2031760D002DDECA /* ProfileVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 		FA4216E0200F243B002001E7 /* smack */ = {
 			isa = PBXGroup;
 			children = (
+				FA6F452E20317616002DDECA /* XIBs */,
 				FA5E2D60202D79EF007D5F9E /* Extension */,
 				FA68D7EA20232B7100B76F7B /* Services */,
 				FA832841201860B400C87675 /* Utilities */,
@@ -182,6 +188,15 @@
 				FA98D431202809A50067DA47 /* UserDataService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FA6F452E20317616002DDECA /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				FA6F452B2031760D002DDECA /* ProfileVC.xib */,
+			);
+			name = XIBs;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		FA832841201860B400C87675 /* Utilities */ = {
@@ -256,6 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6F452D2031760D002DDECA /* ProfileVC.xib in Resources */,
 				FA4216EC200F243B002001E7 /* LaunchScreen.storyboard in Resources */,
 				FA4216E9200F243B002001E7 /* Assets.xcassets in Resources */,
 				FA4216E7200F243B002001E7 /* Main.storyboard in Resources */,
@@ -329,6 +345,7 @@
 				FA98D432202809A50067DA47 /* UserDataService.swift in Sources */,
 				FA3335FC20103E3D00543FA3 /* SWRevealViewController.m in Sources */,
 				FA5E2D5D202D5134007D5F9E /* AvatarCell.swift in Sources */,
+				FA6F452C2031760D002DDECA /* ProfileVC.swift in Sources */,
 				FA68D7EC20232B8800B76F7B /* AuthService.swift in Sources */,
 				FA5E2D66202D855B007D5F9E /* UIColor+rgba.swift in Sources */,
 				FA832843201860D400C87675 /* Constant.swift in Sources */,
