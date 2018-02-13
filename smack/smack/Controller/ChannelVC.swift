@@ -23,14 +23,14 @@ class ChannelVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.setupView()
+        self.setupUserInfo()
     }
     
     @objc func userDataDidChange(_ notif: Notification) {
-        self.setupView()
+        self.setupUserInfo()
     }
     
-    func setupView(){
+    func setupUserInfo(){
         if AuthService.instance.isLoggedIn == true{
             profileImg.layer.backgroundColor = UserDataService.instance.getAvatarColor().cgColor
             profileImg.image = UIImage(named: UserDataService.instance.avatarName)

@@ -110,7 +110,6 @@
 				FAC6C34120186F9E00E40341 /* RoundCornerButton.swift */,
 				FA5E2D5C202D5134007D5F9E /* AvatarCell.swift */,
 				FA5E2D5E202D78EE007D5F9E /* CircleImage.swift */,
-				FA6F452A2031760D002DDECA /* ProfileVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +162,7 @@
 		FA596BAF2011AF1700D6CA33 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FA6F452A2031760D002DDECA /* ProfileVC.swift */,
 				FA596BB02011AF3300D6CA33 /* ChannelVC.swift */,
 				FA596BB22011AF3F00D6CA33 /* ChatVC.swift */,
 				FAC6C33F20186B6800E40341 /* LoginVC.swift */,

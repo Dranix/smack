@@ -15,6 +15,7 @@ enum URL{
     static let AUTH = "\(URL.BASE)account/register"
     static let LOGIN = "\(URL.BASE)account/login"
     static let ADD = "\(URL.BASE)user/add"
+    static let FIND_USER_BY_EMAIL = "\(URL.BASE)user/byEmail/"
 }
 
 enum NOTIFICATION{
@@ -36,6 +37,13 @@ enum SEGUES{
 }
 
 enum REQUEST{
-    static let HEADER = ["Content-Type":"application/json;charset=utf-8"]
+    static let HEADER = [
+        "Content-Type":"application/json;charset=utf-8"
+    ]
+    
+    static let BEARER_HEADER = [
+        "Content-Type": "application/json;chartype=utf-8",
+        "Authorization": "Bearer \(AuthService.instance.authToken)"
+    ]
 }
 

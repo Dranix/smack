@@ -10,6 +10,7 @@ import UIKit
 
 class ChatVC: UIViewController {
     @IBOutlet weak var menuBtn: UIButton!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,5 +19,13 @@ class ChatVC: UIViewController {
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
+        if AuthService.instance.isLoggedIn {
+            AuthService.instance.findUser(completion: { (success) in
+                if success{
+                    NotificationCenter.default.post(name: NOTIFICATION.USER_DATA_CHANGED, object: nil)
+                }
+            })
+        }
     }
 }
